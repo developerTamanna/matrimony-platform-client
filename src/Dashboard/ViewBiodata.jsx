@@ -132,15 +132,17 @@ const ViewBiodata = () => {
         ))}
       </div>
 
-      <button
-        disabled={user?.role?.role === 'premium'}
-        onClick={() => handleMakePremium()}
-        className="w-full absolute bottom-0 bg-lime-600 hover:bg-lime-700 text-white py-2 rounded transition"
-      >
-        {user?.role?.role === 'premium'
-          ? 'Your are Premium user'
-          : 'Request to Make Premium'}
-      </button>
+      <div className="flex justify-center mt-6">
+        <button
+          disabled={user?.role?.role === 'premium'}
+          onClick={() => handleMakePremium()}
+          className="bg-lime-600 hover:bg-lime-700 text-white px-8 py-3 rounded-lg shadow-md transition"
+        >
+          {user?.role?.role === 'premium'
+            ? 'Your are Premium user'
+            : 'Request to Make Premium'}
+        </button>
+      </div>
     </div>
   );
 };
