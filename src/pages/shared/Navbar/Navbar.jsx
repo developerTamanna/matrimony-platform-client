@@ -86,16 +86,13 @@ const Navbar = () => {
                 {showName && (
                   <div
                     className="absolute flex flex-col items-center justify-between top-full mt-1 left-1/2 -translate-x-1/2
-  bg-lime-600 dark:bg-gray-800 text-white dark:text-gray-200
-  text-sm rounded px-2 py-1 whitespace-nowrap shadow-lg z-10"
+                        bg-lime-50 dark:bg-gray-800 text-black dark:text-gray-200
+                        text-sm rounded px-4 py-2 whitespace-nowrap shadow-lg z-10"
                   >
                     <p className="pb-1 border-b border-dotted border-gray-300 dark:border-gray-600 w-full text-center">
                       {user.displayName || 'No Name'}
                     </p>
-                    <NavLink
-                      to="/dashboard"
-                      className="pt-1 hover:underline text-white dark:text-gray-200"
-                    >
+                    <NavLink to="/dashboard" className={navLinkClass}>
                       Dashboard
                     </NavLink>
                   </div>
