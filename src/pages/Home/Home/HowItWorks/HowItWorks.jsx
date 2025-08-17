@@ -30,7 +30,7 @@ export default function HowItWorks() {
 
   return (
     <section className="py-16 bg-lime-50 dark:bg-[#1a1a1a]">
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16">
+      <div className="max-w-7xl mx-auto ">
         <div className="flex flex-col text-center">
           <h2 className="text-4xl font-extrabold text-lime-700 dark:text-lime-400 mb-4">
             How Matrimony{' '}

@@ -68,7 +68,7 @@ const CountupSection = () => {
   ];
 
   return (
-    <div className="py-12 px-4 sm:px-8 lg:px-16 bg-lime-50 dark:bg-black grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+    <div className="max-w-7xl mx-auto py-12  bg-lime-50 dark:bg-black grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
       {items.map((item, idx) => (
         <div
           key={idx}

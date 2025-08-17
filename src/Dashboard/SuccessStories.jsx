@@ -32,7 +32,7 @@ const SuccessStories = () => {
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
+    <div className="max-w-7xl mx-auto  py-12">
       <h2 className="text-3xl font-bold text-center mb-10 text-lime-600 dark:text-lime-400 flex items-center justify-center gap-2">
         <FaHeart className="text-lime-500" />
         Success Stories

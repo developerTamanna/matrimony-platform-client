@@ -63,7 +63,7 @@ export default function FAQSection() {
         </span>
       </h2>
 
-      <div className="space-y-4 max-w-6xl mx-auto">
+      <div className="space-y-4 max-w-7xl mx-auto">
         {faqs.map((faq, index) => (
           <div
             key={index}

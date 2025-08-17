@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const MembershipPlans = () => {
   return (
     <section className="bg-lime-50 dark:bg-black py-16 px-4 md:px-12">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-white mb-4">
           <span className="text-lime-600">Membership</span> Plans
         </h2>
