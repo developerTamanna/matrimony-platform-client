@@ -1,10 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from 'react';
+import { toast } from 'react-hot-toast';
 
 const Contact = () => {
   // dynamic path change
   useEffect(() => {
     document.title = 'contact-us';
   }, []);
+  const formRef = useRef();
+  const handleSubmit = () => {
+    toast.success('Successfully sent !!');
+    formRef.current.reset(); // ✅ form clear হবে
+  };
   return (
     <section className="bg-lime-50 dark:bg-[#121212] text-gray-800 dark:text-white pt-24 pb-16 px-4 md:px-8 min-h-screen flex items-center justify-center">
       <div className="w-full max-w-3xl space-y-8">
@@ -17,7 +23,7 @@ const Contact = () => {
           We’re here to assist you.
         </p>
 
-        <form className="space-y-6">
+        <form className="space-y-6" ref={formRef}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
               type="text"
@@ -41,7 +47,8 @@ const Contact = () => {
           ></textarea>
 
           <button
-            type="submit"
+            type="button"
+            onClick={handleSubmit}
             className="w-full bg-lime-600 hover:bg-lime-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
           >
             Send Message
