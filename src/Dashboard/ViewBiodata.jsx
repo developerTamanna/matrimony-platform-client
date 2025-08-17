@@ -77,11 +77,11 @@ const ViewBiodata = () => {
         Your Submitted Biodatas ({myBiodatas.length})
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="flex justify-center items-center  gap-6">
         {myBiodatas.map((biodata) => (
           <div
             key={biodata._id}
-            className="bg-white dark:bg-black border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow"
+            className="bg-white dark:bg-black md:w-1/2 w-full border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow"
           >
             <div className="flex gap-4 items-center mb-4">
               <img
