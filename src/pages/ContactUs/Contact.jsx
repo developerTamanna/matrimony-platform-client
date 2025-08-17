@@ -20,7 +20,7 @@ const Contact = () => {
 
         <p className="text-center text-base md:text-lg">
           Have questions, suggestions, or need help? Feel free to reach out.
-          We’re here to assist you.
+          We’re here to assist you ❣❣❣.
         </p>
 
         <form className="space-y-6" ref={formRef}>
