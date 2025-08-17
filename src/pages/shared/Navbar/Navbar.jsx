@@ -74,8 +74,7 @@ const Navbar = () => {
 
               {/* Profile Picture */}
               <div
-                onMouseEnter={() => setShowName(true)}
-                onMouseLeave={() => setShowName(false)}
+                onClick={() => setShowName(!showName)}
                 className="relative cursor-pointer"
               >
                 <img
@@ -85,8 +84,20 @@ const Navbar = () => {
                   className="w-10 h-10 rounded-full border-2 border-lime-600 dark:border-lime-400"
                 />
                 {showName && (
-                  <div className="absolute top-full mt-1 left-1/2 -translate-x-1/2 bg-lime-600 text-white text-sm rounded px-2 py-1 whitespace-nowrap shadow-lg z-10">
-                    {user.displayName || 'No Name'}
+                  <div
+                    className="absolute flex flex-col items-center justify-between top-full mt-1 left-1/2 -translate-x-1/2
+  bg-lime-600 dark:bg-gray-800 text-white dark:text-gray-200
+  text-sm rounded px-2 py-1 whitespace-nowrap shadow-lg z-10"
+                  >
+                    <p className="pb-1 border-b border-dotted border-gray-300 dark:border-gray-600 w-full text-center">
+                      {user.displayName || 'No Name'}
+                    </p>
+                    <NavLink
+                      to="/dashboard"
+                      className="pt-1 hover:underline text-white dark:text-gray-200"
+                    >
+                      Dashboard
+                    </NavLink>
                   </div>
                 )}
               </div>

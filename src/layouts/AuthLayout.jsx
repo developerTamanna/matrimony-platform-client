@@ -3,8 +3,8 @@ import { Outlet, Link } from 'react-router';
 import authImg from '../assets/auth.jpg';
 const AuthLayout = () => {
   return (
-    <div className="md:w-11/12 w-full mx-auto bg-lime-50">
-      <div className="flex flex-col md:flex-row min-h-screen">
+    <div className=" w-full mx-auto bg-lime-50">
+      <div className=" max-w-7xl mx-auto flex flex-col md:flex-row min-h-screen">
         {/* Left Side - Form Content */}
         <div className="flex-1 flex items-center justify-center md:p-6 p-2 bg-lime-50 relative">
           {/* Back to Home Button */}
