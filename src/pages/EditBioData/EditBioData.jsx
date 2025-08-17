@@ -5,7 +5,6 @@ import useAuth from '../../hooks/useAuth';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 
 const EditBioData = () => {
-  // dynamic path change
   useEffect(() => {
     document.title = 'Edit-biodata';
   }, []);
@@ -75,55 +74,50 @@ const EditBioData = () => {
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-6">
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-10 bg-gray-50 dark:bg-gray-950">
       <h2 className="text-3xl font-extrabold text-center text-lime-600 dark:text-lime-400 mb-8">
-        Your Biodata List
+        Your Biodata
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {biodatas.map((bio) => (
-          <div
-            key={bio._id}
-            className="bg-white dark:bg-gray-900 shadow-md border border-lime-200 dark:border-lime-800 rounded-xl p-5 transition-all duration-300 hover:shadow-lg"
-          >
-            <div className="flex items-center gap-4">
-              <img
-                src={bio.profileImage}
-                alt="profile"
-                className="w-20 h-20 object-cover rounded-full border-2 border-lime-400 shadow-sm"
-              />
-              <div className="text-gray-800 dark:text-gray-200 space-y-1">
-                <h3 className="text-xl font-semibold text-lime-600 dark:text-lime-400">
-                  {bio.name}
-                </h3>
-                <p className="text-sm">
-                  Biodata ID:{' '}
-                  <span className="font-medium">{bio.biodataId}</span>
-                </p>
-                <p className="text-sm">
-                  Type: {bio.biodataType} | Age: {bio.age}
-                </p>
-                <p className="text-sm">Division: {bio.permanentDivision}</p>
-              </div>
-            </div>
+      {biodatas.map((bio) => (
+        <div
+          key={bio._id}
+          className="bg-white dark:bg-gray-900 shadow-lg border border-lime-200 dark:border-lime-800 rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-300 hover:scale-105 hover:shadow-xl max-w-md w-full"
+        >
+          <img
+            src={bio.profileImage}
+            alt="profile"
+            className="w-24 h-24 object-cover rounded-full border-4 border-lime-400 shadow-md mb-4"
+          />
+          <h3 className="text-xl font-semibold text-lime-600 dark:text-lime-400">
+            {bio.name}
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+            Biodata ID: <span className="font-medium">{bio.biodataId}</span>
+          </p>
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            Type: {bio.biodataType} | Age: {bio.age}
+          </p>
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            Division: {bio.permanentDivision}
+          </p>
 
-            <div className="flex justify-end gap-3 mt-5">
-              <button
-                onClick={() => handleEdit(bio._id)}
-                className="px-4 py-1.5 bg-lime-600 text-white rounded-md hover:bg-lime-700 shadow"
-              >
-                Edit
-              </button>
-              <button
-                onClick={() => handleDelete(bio._id)}
-                className="px-4 py-1.5 bg-red-600 text-white rounded-md hover:bg-red-700 shadow"
-              >
-                Delete
-              </button>
-            </div>
+          <div className="flex justify-center gap-4 mt-6">
+            <button
+              onClick={() => handleEdit(bio._id)}
+              className="px-5 py-2 bg-lime-600 text-white rounded-lg hover:bg-lime-700 shadow-md transition-all"
+            >
+              Edit
+            </button>
+            <button
+              onClick={() => handleDelete(bio._id)}
+              className="px-5 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 shadow-md transition-all"
+            >
+              Delete
+            </button>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };
