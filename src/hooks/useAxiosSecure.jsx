@@ -1,7 +1,7 @@
-import axios from 'axios';
+import axios from "axios";
 const axiosSecure = axios.create({
-  // baseURL: ' https://metrimony-server-site.vercel.app',
-   baseURL: 'http://localhost:3000',
+  baseURL: " https://metrimony-server-site.vercel.app",
+  //  baseURL: 'http://localhost:3000',
   withCredentials: true,
 });
 
@@ -10,7 +10,7 @@ export const setHeader = (user) => {
   if (user) {
     const interceptor = axiosSecure.interceptors.request.use(
       (config) => {
-        config.headers['authorization'] = JSON.stringify({
+        config.headers["authorization"] = JSON.stringify({
           name: user.displayName,
           email: user.email,
           role: user.role.role,
