@@ -39,8 +39,8 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex gap-6 font-medium text-base items-center">
-          <NavLink to="/ai" end className={navLinkClass}>
-            Ai
+          <NavLink to="/" end className={navLinkClass}>
+            Home
           </NavLink>
           <NavLink to="/" end className={navLinkClass}>
             Home

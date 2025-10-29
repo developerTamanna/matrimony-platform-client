@@ -28,7 +28,6 @@ import UpdateBiodata from "../pages/UpdateBiodata/UpdateBiodata";
 import PrivateRoutes from "../Routes/PrivateRoutes";
 import SuccessStories from "../Dashboard/SuccessStories";
 import Overview from "../Dashboard/DashboardInit";
-import Ai from "../components/ai";
 
 export const router = createBrowserRouter([
   {
@@ -40,8 +39,7 @@ export const router = createBrowserRouter([
         Component: Home,
       },
       {
-        path: "/ai",
-        Component: Ai,
+        path: "ai",
       },
       {
         path: "all-biodatas",
